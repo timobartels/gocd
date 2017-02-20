@@ -1,0 +1,22 @@
+pipelines:
+  new_pipeline:
+    group: from_yaml
+    materials:
+      backend:
+        git: https://github.com/timobartels/photowebsite.git
+        branch: master
+    stages:
+      - first_stage:
+          clean_workspace: true
+          jobs:
+            first_task:
+              tasks:
+                - exec:
+                   command: bash
+                   arguments:
+                    - hostname
+                - exec:
+                   command: bash
+                   arguments:
+                    - pwd
+
