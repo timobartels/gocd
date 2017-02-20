@@ -14,9 +14,7 @@ pipelines:
                 - exec:
                    command: bash
                    arguments:
+                    - c
                     - hostname
                 - exec:
-                   command: bash
-                   arguments:
-                    - pwd
-
+                   command: pwd
