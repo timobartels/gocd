@@ -18,6 +18,6 @@ pipelines:
             second_task:
               tasks:
                 - exec:
-                   command: which curl
+                   command: hostname
                 - exec:
-                   command: date
+                   command: echo hello
