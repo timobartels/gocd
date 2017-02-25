@@ -18,6 +18,6 @@ pipelines:
             second_task:
               tasks:
                 - exec:
-                   command: time
+                   command: which curl
                 - exec:
                    command: date
