@@ -9,15 +9,18 @@ pipelines:
       - first_stage:
           clean_workspace: true
           jobs:
-            first_task:
+            first_task1:
               tasks:
                 - exec:
                    command: hostname
                 - exec:
                    command: pwd
-            second_task:
+      - second_stage:
+          clean_workspace: true
+          jobs:
+            first_task2:
               tasks:
                 - exec:
                    command: hostname
                 - exec:
-                   command: echo hello
+                   command: pwd
