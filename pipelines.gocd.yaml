@@ -12,9 +12,12 @@ pipelines:
             first_task:
               tasks:
                 - exec:
-                   command: bash
-                   arguments:
-                    - c
-                    - hostname
+                   command: hostname
                 - exec:
                    command: pwd
+            second_task:
+              tasks:
+                - exec:
+                   command: time
+                - exec:
+                   command: date
